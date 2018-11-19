@@ -13,4 +13,4 @@ angular.module('minhasDiretivas', [])
         ddo.templateUrl = 'js/directives/meu-painel.html';           
 
         return ddo;
-    });
+});

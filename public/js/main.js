@@ -1,19 +1,17 @@
-angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
-    .config(function($routeProvider, $locationProvider) {
+angular.module('alurapic', ['minhasDiretivas','ngAnimate', 'ngRoute'])
+	.config(function($routeProvider, $locationProvider) {
 
-        $locationProvider.html5Mode(true);
+		$locationProvider.html5Mode(true);
 
-        $routeProvider.when('/fotos', {
-            templateUrl: 'partials/principal.html',
-            controller: 'FotosController'
-        });
+		$routeProvider.when('/fotos', {
+			templateUrl: 'partials/principal.html',
+			controller: 'FotosController'
+		});
 
-       // foto no singular!
+		$routeProvider.when('/fotos/new', {
+			templateUrl: 'partials/foto.html'
+		});
 
-        $routeProvider.when('/fotos/new', {
-            templateUrl: 'partials/foto.html'
-        });
+		$routeProvider.otherwise({redirectTo: '/fotos'});
 
-        $routeProvider.otherwise({redirectTo: '/fotos'});
-
-    });
+	});
